@@ -1,13 +1,68 @@
-*{
-    margin: 0;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
     box-sizing: border-box;
-}
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    text-align: center;
+  }
+  ul li {
+    list-style-type: none;
+  }
+  a{
+    text-decoration: inherit;
+    color: inherit;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
 body{
-    height: 100vh;
-    color: aliceblue;
-    font-family: sans-serif;
-    font-size: 16px;
-    background-image: linear-gradient(45deg, rgb(3, 0, 56) 0%, rgba(41,9,121,1) 61%, rgb(2, 137, 210) 100%);
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     background-size: 300%;
     animation: bg-animation 18s infinite alternate;
 }
@@ -21,13 +76,71 @@ body{
 }
 
 #info-container{
-    width: 50%;
-    margin: 25% auto auto;
+    background-color: aliceblue;
+    width: 60%;
+    margin: 2em auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 1rem;
-    border: 1px solid;
-    padding: 2rem;
+    border-radius: 0.25em;
+    padding: 3em 1.5em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media screen and (width < 700px){
+    body{
+        font-size: 16px;
+    }
+    #info-container{
+        width: 80%;
+        padding:3em 1em;
+    }
+}
+h1{
+    font-size: 1.8em;
+    font-weight: 700;
+    letter-spacing: .0125em;
+}
+h2{
+    margin-top: 1rem;
+    font-size: 1.4em;
+    font-weight: 600;
+    font-style: italic;
+}
+ul{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+}
+li{
+    padding: 1em;    
+    margin: 1em 0;
+    width: 100%;
+    border-radius: 1.25em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    text-align: center;
+    cursor: pointer;
+    transition: 300ms;
+}
+li:hover{
+    box-shadow: rgba(200, 80, 192, 0.5) 0px 6px 10px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+a{  
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: 600ms;
+    font-size: 1.2em;
+}
+a:hover{
+        background-size: 100% 3px;
+}
+/* temporal */
+img{
+    display: none;
 }
