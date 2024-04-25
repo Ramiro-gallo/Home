@@ -127,6 +127,9 @@ i:hover{
     flex-direction: column;
     margin-top: 1em;
   }
+  i:hover{
+    box-shadow: none;
+  }
 }
 h2{
     margin-top: 1.5em;
