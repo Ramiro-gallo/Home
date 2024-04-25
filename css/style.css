@@ -116,6 +116,10 @@ i{
   color: transparent;
   background-size: 300%;
   animation: bg-animation 18s infinite alternate;
+  transition: 500ms;
+}
+i:hover{
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px;
 }
 @media screen and (width < 400px){
   .contact-buttons-container{
