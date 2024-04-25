@@ -102,7 +102,7 @@ h1{
 }
 .contact-buttons-container{
   margin-top: .5em;
-  width: 30%;
+  width: 40%;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -124,8 +124,8 @@ i:hover{
 }
 @media screen and (width < 400px){
   .contact-buttons-container{
-    flex-direction: column;
     margin-top: 1em;
+    width: 70%;
   }
   i:hover{
     box-shadow: none;
